@@ -2,12 +2,12 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { CheckCircle2, Upload } from 'lucide-react'
 import { allProducts } from '../data/products'
+import { submitNetlifyForm } from '../lib/netlifyForms'
 
 // Full inline quote/lead form (Contact page + product pages without a
 // calculator mapping). Mirrors the modal flow but lives in the page.
-//
-// TODO (backend): replace the body of handleSubmit with a fetch() POST to
-// your API, a form service (Formspree/Getform), or an email service route.
+// Submits via Netlify Forms — see src/lib/netlifyForms.js and the matching
+// hidden form ("quote-request") in index.html.
 export default function QuoteForm({ defaultProduct = '' }) {
   const [form, setForm] = useState({
     name: '',
@@ -21,15 +21,24 @@ export default function QuoteForm({ defaultProduct = '' }) {
   })
   const [fileName, setFileName] = useState('')
   const [submitted, setSubmitted] = useState(false)
+  const [error, setError] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
 
   const update = (field) => (e) => setForm((f) => ({ ...f, [field]: e.target.value }))
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // TODO: send `form` (+ uploaded artwork) to your backend / email service.
-    // eslint-disable-next-line no-console
-    console.log('Quote form submitted →', { ...form, artwork: fileName })
-    setSubmitted(true)
+    setError(false)
+    setSubmitting(true)
+    try {
+      await submitNetlifyForm('quote-request', { ...form, artwork: fileName })
+      setSubmitted(true)
+    } catch (err) {
+      console.error('Quote form submission failed', err)
+      setError(true)
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   if (submitted) {
@@ -95,9 +104,14 @@ export default function QuoteForm({ defaultProduct = '' }) {
         />
       </div>
 
-      <button type="submit" className="btn-accent mt-5 w-full sm:w-auto">
-        Request My Free Quote
+      <button type="submit" disabled={submitting} className="btn-accent mt-5 w-full disabled:opacity-60 sm:w-auto">
+        {submitting ? 'Sending…' : 'Request My Free Quote'}
       </button>
+      {error && (
+        <p className="mt-3 text-xs font-semibold text-red-600">
+          Something went wrong sending your request — please try again or email us directly.
+        </p>
+      )}
       <p className="mt-3 text-xs text-muted">
         No spam, no obligation. We reply within one business day with pricing and a free digital proof.
       </p>

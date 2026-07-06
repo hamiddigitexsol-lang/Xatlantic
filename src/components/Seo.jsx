@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 // canonical URL, and optional JSON-LD structured data on route change.
 // (No extra dependency needed — works with any React Router page.)
 const SITE_NAME = 'X Atlantic Patches'
-const SITE_URL = 'https://www.xatlanticpatches.com' // TODO: replace with the real domain at launch
+const SITE_URL = 'https://www.xatlanticpatches.com'
 
 function upsertMeta(name, content) {
   let el = document.querySelector(`meta[name="${name}"]`)

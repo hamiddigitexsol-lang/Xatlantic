@@ -50,7 +50,32 @@
       "Bash(mv Xatlantic/.git .)",
       "Bash(mv Xatlantic/.gitattributes .)",
       "Bash(rmdir Xatlantic)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(git config *)",
+      "Bash(git fetch *)",
+      "Bash(npm run *)",
+      "Bash(npx --yes netlify-cli --version)",
+      "Bash(npx netlify-cli *)",
+      "Bash(curl -s https://xatlantic-patches.netlify.app)",
+      "Bash(git commit *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://xatlanticpatches.com --max-time 10)",
+      "Bash(curl -sk -o /dev/null -w \"%{http_code}\\\\n\" https://xatlanticpatches.com --max-time 10)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" https://xatlanticpatches.com --max-time 10)",
+      "Bash(echo \"exit: $?\")",
+      "Bash(curl -skvI https://xatlanticpatches.com --max-time 10)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" https://www.xatlanticpatches.com --max-time 10)",
+      "Bash(curl -svI https://xatlanticpatches.com --max-time 10)",
+      "Bash(nslookup -type=AAAA xatlanticpatches.com 8.8.8.8)",
+      "Bash(nslookup -type=CAA xatlanticpatches.com 8.8.8.8)",
+      "Bash(nslookup -type=A xatlanticpatches.com 8.8.8.8)",
+      "Bash(nslookup -type=CNAME www.xatlanticpatches.com 8.8.8.8)",
+      "Bash(curl -s \"https://dns.google/resolve?name=xatlanticpatches.com&type=CAA\" --max-time 10)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" https://xatlanticpatches.com --max-time 15)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" https://www.xatlanticpatches.com --max-time 15)",
+      "Bash(curl -s https://xatlanticpatches.com --max-time 15)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" https://xatlanticpatches.com/pricing --max-time 15)"
     ]
   }
 }

@@ -1,20 +1,16 @@
 import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { CheckCircle2, X } from 'lucide-react'
+import { submitNetlifyForm } from '../lib/netlifyForms'
 
 // Lead-capture modal, pre-filled with the visitor's calculator selections.
-//
-// ── BACKEND INTEGRATION (TODO) ───────────────────────────────────────────────
-// Submitting currently logs the lead and shows a confirmation. To make this a
-// real lead tool, replace the body of `handleSubmit` with one of:
-//   • a fetch() POST to your API / serverless function
-//   • a form service (Formspree, Getform, Basin) endpoint
-//   • an email service (Resend, SendGrid) call from a serverless route
-// The `summary` object + `form` state below contain everything you need.
-// ─────────────────────────────────────────────────────────────────────────────
+// Submits via Netlify Forms — see src/lib/netlifyForms.js and the matching
+// hidden form ("calculator-quote") in index.html.
 export default function QuoteModal({ open, onClose, summary }) {
   const [form, setForm] = useState({ name: '', email: '', phone: '', notes: '' })
   const [submitted, setSubmitted] = useState(false)
+  const [error, setError] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
 
   useEffect(() => {
     if (open) {
@@ -31,12 +27,29 @@ export default function QuoteModal({ open, onClose, summary }) {
 
   const update = (field) => (e) => setForm((f) => ({ ...f, [field]: e.target.value }))
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // TODO: send `form` + `summary` to your backend / email service here.
-    // eslint-disable-next-line no-console
-    console.log('Quote lead submitted →', { ...form, quote: summary })
-    setSubmitted(true)
+    setError(false)
+    setSubmitting(true)
+    const lineValue = (label) => summary?.lines?.find((l) => l.label === label)?.value ?? ''
+    try {
+      await submitNetlifyForm('calculator-quote', {
+        ...form,
+        product: lineValue('Product'),
+        size: lineValue('Size'),
+        backing: lineValue('Backing'),
+        quantity: lineValue('Quantity'),
+        price_per_unit: lineValue('Price / unit'),
+        estimated_total: lineValue('Estimated total'),
+        turnaround: lineValue('Turnaround'),
+      })
+      setSubmitted(true)
+    } catch (err) {
+      console.error('Quote lead submission failed', err)
+      setError(true)
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   return (
@@ -122,9 +135,14 @@ export default function QuoteModal({ open, onClose, summary }) {
                     />
                   </div>
 
-                  <button type="submit" className="btn-accent w-full">
-                    Send My Quote Request
+                  <button type="submit" disabled={submitting} className="btn-accent w-full disabled:opacity-60">
+                    {submitting ? 'Sending…' : 'Send My Quote Request'}
                   </button>
+                  {error && (
+                    <p className="text-center text-xs font-semibold text-red-600">
+                      Something went wrong sending your request — please try again or email us directly.
+                    </p>
+                  )}
                   <p className="text-center text-xs text-muted">
                     No spam. We typically reply within one business day.
                   </p>
