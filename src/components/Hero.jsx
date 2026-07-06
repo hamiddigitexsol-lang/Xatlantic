@@ -122,8 +122,11 @@ export default function Hero({ selectedProductId }) {
           </motion.p>
         </div>
 
-        {/* Right — live calculator, with patch photos floating behind it */}
-        <div className="relative">
+        {/* Right — live calculator, with patch photos floating behind it.
+            `isolate` scopes FloatingPatches' negative z-index to this
+            wrapper, so it sits behind the card only — not behind the
+            entire section's opaque background. */}
+        <div className="relative isolate">
           <FloatingPatches />
           <motion.div
             initial={{ opacity: 0, y: 30, scale: 0.98 }}
