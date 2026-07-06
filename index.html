@@ -37,7 +37,7 @@
       these forms (Netlify Forms requires a plain HTML <form> with matching
       field names — the live React forms submit to these via fetch()).
     -->
-    <form name="quote-request" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <form name="quote-request" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" hidden>
       <input type="text" name="name" />
       <input type="email" name="email" />
       <input type="text" name="phone" />
@@ -45,7 +45,7 @@
       <input type="text" name="quantity" />
       <input type="text" name="width" />
       <input type="text" name="height" />
-      <input type="text" name="artwork" />
+      <input type="file" name="artwork" />
       <textarea name="notes"></textarea>
     </form>
     <form name="calculator-quote" data-netlify="true" netlify-honeypot="bot-field" hidden>

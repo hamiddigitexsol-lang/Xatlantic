@@ -19,7 +19,7 @@ export default function QuoteForm({ defaultProduct = '' }) {
     height: '',
     notes: '',
   })
-  const [fileName, setFileName] = useState('')
+  const [artwork, setArtwork] = useState(null)
   const [submitted, setSubmitted] = useState(false)
   const [error, setError] = useState(false)
   const [submitting, setSubmitting] = useState(false)
@@ -31,7 +31,7 @@ export default function QuoteForm({ defaultProduct = '' }) {
     setError(false)
     setSubmitting(true)
     try {
-      await submitNetlifyForm('quote-request', { ...form, artwork: fileName })
+      await submitNetlifyForm('quote-request', { ...form, ...(artwork ? { artwork } : {}) })
       setSubmitted(true)
     } catch (err) {
       console.error('Quote form submission failed', err)
@@ -88,8 +88,13 @@ export default function QuoteForm({ defaultProduct = '' }) {
         <Label>Artwork (optional)</Label>
         <label className="flex cursor-pointer items-center gap-3 rounded-xl border border-dashed border-line bg-paper px-4 py-3.5 text-sm text-muted transition-colors hover:border-brand hover:text-brand">
           <Upload size={17} />
-          {fileName || 'Upload your design — AI, EPS, PDF, PNG, or JPG'}
-          <input type="file" className="hidden" accept=".ai,.eps,.pdf,.png,.jpg,.jpeg,.svg" onChange={(e) => setFileName(e.target.files?.[0]?.name ?? '')} />
+          {artwork?.name || 'Upload your design — AI, EPS, PDF, PNG, or JPG'}
+          <input
+            type="file"
+            className="hidden"
+            accept=".ai,.eps,.pdf,.png,.jpg,.jpeg,.svg"
+            onChange={(e) => setArtwork(e.target.files?.[0] ?? null)}
+          />
         </label>
       </div>
 

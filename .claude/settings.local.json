@@ -75,7 +75,17 @@
       "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" https://xatlanticpatches.com --max-time 15)",
       "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" https://www.xatlanticpatches.com --max-time 15)",
       "Bash(curl -s https://xatlanticpatches.com --max-time 15)",
-      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" https://xatlanticpatches.com/pricing --max-time 15)"
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" https://xatlanticpatches.com/pricing --max-time 15)",
+      "Bash(curl -s -X POST https://xatlanticpatches.com/ -H 'Content-Type: application/x-www-form-urlencoded' --data-urlencode form-name=quote-request --data-urlencode 'name=Test Verification' --data-urlencode email=test@example.com --data-urlencode phone= --data-urlencode 'product=Embroidered Patch' --data-urlencode quantity=100 --data-urlencode width=3 --data-urlencode height=3 --data-urlencode 'notes=End-to-end pipeline test' --data-urlencode artwork= -w '\\\\nHTTP_CODE:%{http_code}\\\\n')",
+      "Bash(curl -s https://xatlanticpatches.com/)",
+      "Bash(curl -s -X POST https://xatlanticpatches.com/ -H 'Content-Type: application/x-www-form-urlencoded' --data-urlencode form-name=quote-request --data-urlencode 'name=Test Verification' --data-urlencode email=test@example.com --data-urlencode phone= --data-urlencode 'product=Embroidered Patch' --data-urlencode quantity=100 --data-urlencode width=3 --data-urlencode height=3 --data-urlencode 'notes=End-to-end pipeline test' --data-urlencode artwork= -w '\\\\nHTTP_CODE:%{http_code}\\\\n' -o /tmp/form_test_response.html)",
+      "Read(//tmp/**)",
+      "Bash(node -e \"let d='';process.stdin.on\\('data',c=>d+=c\\);process.stdin.on\\('end',\\(\\)=>{const f=JSON.parse\\(d\\);console.log\\(f.map\\(x=>x.name+' \\(fields: '+x.fields.length+', submissions: '+x.submission_count+'\\)'\\).join\\('\\\\n'\\)\\)}\\)\")",
+      "Bash(curl -s -X POST https://xatlanticpatches.com/ -H 'Content-Type: application/x-www-form-urlencoded' --data-urlencode form-name=quote-request --data-urlencode 'name=Pipeline Recheck' --data-urlencode email=recheck@example.com --data-urlencode 'notes=Rechecking after user report of no email' -w '\\\\nHTTP_CODE:%{http_code}\\\\n')",
+      "Bash(node -e \"let d='';process.stdin.on\\('data',c=>d+=c\\);process.stdin.on\\('end',\\(\\)=>{const f=JSON.parse\\(d\\);console.log\\(f.map\\(x=>x.name+' | submissions:'+x.submission_count+' | last:'+x.last_submission_at\\).join\\('\\\\n'\\)\\)}\\)\")",
+      "Bash(curl -s -X POST https://xatlanticpatches.com/ -H 'Content-Type: application/x-www-form-urlencoded' --data-urlencode form-name=calculator-quote --data-urlencode 'name=Calc Modal Recheck' --data-urlencode email=calccheck@example.com --data-urlencode phone= --data-urlencode 'product=Embroidered Patch' --data-urlencode 'size=3\" × 3\"' --data-urlencode backing=Iron-on --data-urlencode quantity=100 --data-urlencode 'price_per_unit=$3.00' --data-urlencode 'estimated_total=$300.00' --data-urlencode 'turnaround=7–10 business days' --data-urlencode 'notes=Recheck of calculator-quote form specifically' -w '\\\\nHTTP_CODE:%{http_code}\\\\n')",
+      "Bash(node -e \"let d='';process.stdin.on\\('data',c=>d+=c\\);process.stdin.on\\('end',\\(\\)=>{const s=JSON.parse\\(d\\);console.log\\(s.map\\(x=>x.id\\).join\\('\\\\n'\\)\\)}\\)\")",
+      "Bash(node -e \"let d='';process.stdin.on\\('data',c=>d+=c\\);process.stdin.on\\('end',\\(\\)=>{const f=JSON.parse\\(d\\);console.log\\(f.map\\(x=>x.name+' | submissions:'+x.submission_count\\).join\\('\\\\n'\\)\\)}\\)\")"
     ]
   }
 }
