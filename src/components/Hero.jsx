@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowRight, Check, Star } from 'lucide-react'
 import Calculator from './Calculator'
+import FloatingPatches from './FloatingPatches'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 26 },
@@ -121,14 +122,17 @@ export default function Hero({ selectedProductId }) {
           </motion.p>
         </div>
 
-        {/* Right — live calculator */}
-        <motion.div
-          initial={{ opacity: 0, y: 30, scale: 0.98 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
-        >
-          <Calculator selectedProductId={selectedProductId} />
-        </motion.div>
+        {/* Right — live calculator, with patch photos floating behind it */}
+        <div className="relative">
+          <FloatingPatches />
+          <motion.div
+            initial={{ opacity: 0, y: 30, scale: 0.98 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <Calculator selectedProductId={selectedProductId} />
+          </motion.div>
+        </div>
       </div>
     </section>
   )

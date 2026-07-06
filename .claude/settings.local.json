@@ -85,7 +85,13 @@
       "Bash(node -e \"let d='';process.stdin.on\\('data',c=>d+=c\\);process.stdin.on\\('end',\\(\\)=>{const f=JSON.parse\\(d\\);console.log\\(f.map\\(x=>x.name+' | submissions:'+x.submission_count+' | last:'+x.last_submission_at\\).join\\('\\\\n'\\)\\)}\\)\")",
       "Bash(curl -s -X POST https://xatlanticpatches.com/ -H 'Content-Type: application/x-www-form-urlencoded' --data-urlencode form-name=calculator-quote --data-urlencode 'name=Calc Modal Recheck' --data-urlencode email=calccheck@example.com --data-urlencode phone= --data-urlencode 'product=Embroidered Patch' --data-urlencode 'size=3\" × 3\"' --data-urlencode backing=Iron-on --data-urlencode quantity=100 --data-urlencode 'price_per_unit=$3.00' --data-urlencode 'estimated_total=$300.00' --data-urlencode 'turnaround=7–10 business days' --data-urlencode 'notes=Recheck of calculator-quote form specifically' -w '\\\\nHTTP_CODE:%{http_code}\\\\n')",
       "Bash(node -e \"let d='';process.stdin.on\\('data',c=>d+=c\\);process.stdin.on\\('end',\\(\\)=>{const s=JSON.parse\\(d\\);console.log\\(s.map\\(x=>x.id\\).join\\('\\\\n'\\)\\)}\\)\")",
-      "Bash(node -e \"let d='';process.stdin.on\\('data',c=>d+=c\\);process.stdin.on\\('end',\\(\\)=>{const f=JSON.parse\\(d\\);console.log\\(f.map\\(x=>x.name+' | submissions:'+x.submission_count\\).join\\('\\\\n'\\)\\)}\\)\")"
+      "Bash(node -e \"let d='';process.stdin.on\\('data',c=>d+=c\\);process.stdin.on\\('end',\\(\\)=>{const f=JSON.parse\\(d\\);console.log\\(f.map\\(x=>x.name+' | submissions:'+x.submission_count\\).join\\('\\\\n'\\)\\)}\\)\")",
+      "Bash(node -e \"let d='';process.stdin.on\\('data',c=>d+=c\\);process.stdin.on\\('end',\\(\\)=>{const f=JSON.parse\\(d\\);f.forEach\\(x=>console.log\\(x.name+': '+x.fields.map\\(y=>y.name\\).join\\(', '\\)\\)\\)}\\)\")",
+      "Bash(curl -s -X POST https://xatlanticpatches.com/ -F form-name=quote-request -F 'name=File Upload Test' -F email=filetest@example.com -F 'notes=Testing real file attachment' -F 'artwork=@pvc.jpg;type=image/jpeg' -w '\\\\nHTTP_CODE:%{http_code}\\\\n')",
+      "Bash(curl -sI https://xatlanticpatches.com/)",
+      "Bash(curl -sI https://xatlanticpatches.com/assets/index-C-AMI70N.js)",
+      "Bash(node -e \"let d='';process.stdin.on\\('data',c=>d+=c\\);process.stdin.on\\('end',\\(\\)=>{const f=JSON.parse\\(d\\);console.log\\(f.map\\(x=>x.name+':'+x.submission_count\\).join\\(' | '\\)\\)}\\)\")",
+      "Bash(node -e \"let d='';process.stdin.on\\('data',c=>d+=c\\);process.stdin.on\\('end',\\(\\)=>{const s=JSON.parse\\(d\\);console.log\\(s.map\\(x=>x.id+' | '+x.title\\).join\\('\\\\n'\\)\\)}\\)\")"
     ]
   }
 }
