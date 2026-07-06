@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowRight, Check, Star } from 'lucide-react'
 import Calculator from './Calculator'
-import FloatingPatches from './FloatingPatches'
+import PatchesBackground from './PatchesBackground'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 26 },
@@ -17,25 +17,15 @@ const bullets = ['Low order minimums', 'Free digital proof', 'Ships in as few as
 
 export default function Hero({ selectedProductId }) {
   return (
-    <section id="home" className="relative overflow-hidden bg-white">
-      {/* soft brand wash + dotted texture */}
-      <div className="pointer-events-none absolute inset-0 bg-hero-fade" aria-hidden />
+    <section id="home" className="relative overflow-hidden bg-navy-900">
+      {/* Full-bleed wall of real patch photos, with a dark scrim on top so
+          the white/light text on the right reads clearly. DOM order (not
+          z-index) keeps this behind the content below. */}
+      <PatchesBackground />
       <div
-        className="pointer-events-none absolute inset-0 opacity-[0.5]"
-        style={{
-          backgroundImage: 'radial-gradient(#dbe3f0 1px, transparent 1px)',
-          backgroundSize: '22px 22px',
-          maskImage: 'linear-gradient(to bottom, black, transparent 70%)',
-          WebkitMaskImage: 'linear-gradient(to bottom, black, transparent 70%)',
-        }}
+        className="pointer-events-none absolute inset-0 bg-navy-900/80"
         aria-hidden
       />
-
-      {/* Real patch photos gently floating across the whole hero. Placed
-          after the background layers but before the content in DOM order,
-          so it paints above the texture and below the text/card (which
-          have opaque backgrounds) — no z-index juggling needed. */}
-      <FloatingPatches />
 
       <div className="container-x relative grid items-center gap-12 py-14 lg:grid-cols-[1.05fr_0.95fr] lg:py-20">
         {/* Left — copy */}
@@ -56,13 +46,13 @@ export default function Hero({ selectedProductId }) {
             initial="hidden"
             animate="show"
             custom={1}
-            className="mt-5 text-4xl font-extrabold leading-[1.08] tracking-tight text-navy-900 sm:text-5xl lg:text-6xl"
+            className="mt-5 text-4xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-6xl"
           >
             Custom emblems —{' '}
-            <span className="relative whitespace-nowrap text-brand">
+            <span className="relative whitespace-nowrap text-brand-light">
               done right
               <svg
-                className="absolute -bottom-1.5 left-0 h-2.5 w-full text-brand/30"
+                className="absolute -bottom-1.5 left-0 h-2.5 w-full text-brand-light/40"
                 viewBox="0 0 100 8"
                 preserveAspectRatio="none"
                 aria-hidden
@@ -78,7 +68,7 @@ export default function Hero({ selectedProductId }) {
             initial="hidden"
             animate="show"
             custom={2}
-            className="mt-5 text-lg leading-relaxed text-muted"
+            className="mt-5 text-lg leading-relaxed text-white/75"
           >
             Your one-stop shop for turning ideas into reality. From embroidered and leather patches
             to challenge coins and pins — crafted with personalized service and quality you’ll love.
@@ -92,8 +82,8 @@ export default function Hero({ selectedProductId }) {
             className="mt-6 flex flex-wrap gap-x-6 gap-y-2"
           >
             {bullets.map((b) => (
-              <li key={b} className="flex items-center gap-2 text-sm font-medium text-ink">
-                <span className="grid h-5 w-5 place-items-center rounded-full bg-brand-soft text-brand">
+              <li key={b} className="flex items-center gap-2 text-sm font-medium text-white">
+                <span className="grid h-5 w-5 place-items-center rounded-full bg-brand text-white">
                   <Check size={13} strokeWidth={3} />
                 </span>
                 {b}
@@ -122,9 +112,9 @@ export default function Hero({ selectedProductId }) {
             initial="hidden"
             animate="show"
             custom={5}
-            className="mt-4 text-xs text-muted"
+            className="mt-4 text-xs text-white/70"
           >
-            ⚡ Order now & get <span className="font-semibold text-ink">free delivery</span> on your first run.
+            ⚡ Order now & get <span className="font-semibold text-white">free delivery</span> on your first run.
           </motion.p>
         </div>
 
