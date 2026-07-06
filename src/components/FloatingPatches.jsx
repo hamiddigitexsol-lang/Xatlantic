@@ -1,23 +1,29 @@
 import { motion } from 'framer-motion'
-import pvcImg from '../assets/pvc.jpg'
-import siliconeImg from '../assets/silicone.jpg'
-import metflexImg from '../assets/metflex.jpg'
-import coinImg from '../assets/coin.jpg'
-import wovenImg from '../assets/woven.jpg'
+import shamrockSkull from '../assets/hero-patches/shamrock-skull.jpg'
+import usaFlag from '../assets/hero-patches/usa-flag.jpg'
+import newYork from '../assets/hero-patches/new-york.jpg'
+import moneyRoll from '../assets/hero-patches/money-roll.jpg'
+import badMoon from '../assets/hero-patches/bad-moon.jpg'
+import compassNavy from '../assets/hero-patches/compass-navy.jpg'
+import compassRed from '../assets/hero-patches/compass-red.jpg'
+import wovenShield from '../assets/hero-patches/woven-shield.jpg'
 
-// Decorative patch photos that gently bob behind the hero calculator card.
+// Decorative real patch photos that gently bob all around the hero section.
 // Hidden below `lg` so they never compete with content on smaller screens.
 const patches = [
-  { img: metflexImg, top: '-6%', right: '4%', size: 108, rotate: -12, duration: 6.5, delay: 0 },
-  { img: pvcImg, top: '20%', left: '-8%', size: 88, rotate: 9, duration: 7.5, delay: 0.6 },
-  { img: coinImg, bottom: '-4%', left: '8%', size: 76, rotate: -8, duration: 6, delay: 1.1 },
-  { img: siliconeImg, bottom: '-8%', right: '-4%', size: 96, rotate: 13, duration: 7, delay: 0.3 },
-  { img: wovenImg, top: '46%', right: '-10%', size: 68, rotate: 6, duration: 8, delay: 1.6 },
+  { img: shamrockSkull, top: '3%', left: '0%', size: 92, rotate: -10, duration: 6.5, delay: 0 },
+  { img: moneyRoll, top: '4%', right: '3%', size: 82, rotate: 12, duration: 7, delay: 0.4 },
+  { img: usaFlag, top: '56%', left: '-4%', size: 100, rotate: 8, duration: 7.5, delay: 0.8 },
+  { img: compassNavy, top: '44%', right: '-5%', size: 92, rotate: 6, duration: 6.8, delay: 0.2 },
+  { img: newYork, bottom: '3%', left: '9%', size: 86, rotate: -7, duration: 8, delay: 1.2 },
+  { img: badMoon, bottom: '2%', right: '15%', size: 96, rotate: -9, duration: 7.2, delay: 0.6 },
+  { img: compassRed, bottom: '9%', right: '-3%', size: 78, rotate: -14, duration: 6.3, delay: 1.6 },
+  { img: wovenShield, top: '18%', left: '47%', size: 68, rotate: 11, duration: 7.8, delay: 1 },
 ]
 
 export default function FloatingPatches() {
   return (
-    <div className="pointer-events-none absolute inset-0 -z-10 hidden lg:block" aria-hidden>
+    <div className="pointer-events-none absolute inset-0 hidden lg:block" aria-hidden>
       {patches.map((p, i) => (
         <motion.div
           key={i}

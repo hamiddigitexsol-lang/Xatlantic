@@ -91,7 +91,14 @@
       "Bash(curl -sI https://xatlanticpatches.com/)",
       "Bash(curl -sI https://xatlanticpatches.com/assets/index-C-AMI70N.js)",
       "Bash(node -e \"let d='';process.stdin.on\\('data',c=>d+=c\\);process.stdin.on\\('end',\\(\\)=>{const f=JSON.parse\\(d\\);console.log\\(f.map\\(x=>x.name+':'+x.submission_count\\).join\\(' | '\\)\\)}\\)\")",
-      "Bash(node -e \"let d='';process.stdin.on\\('data',c=>d+=c\\);process.stdin.on\\('end',\\(\\)=>{const s=JSON.parse\\(d\\);console.log\\(s.map\\(x=>x.id+' | '+x.title\\).join\\('\\\\n'\\)\\)}\\)\")"
+      "Bash(node -e \"let d='';process.stdin.on\\('data',c=>d+=c\\);process.stdin.on\\('end',\\(\\)=>{const s=JSON.parse\\(d\\);console.log\\(s.map\\(x=>x.id+' | '+x.title\\).join\\('\\\\n'\\)\\)}\\)\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" https://xatlanticpatches.com/)",
+      "Bash(ls -la \"D:\\\\patchess\" 2>&1)",
+      "Bash(mkdir -p \"C:\\\\Users\\\\Lenovo\\\\Desktop\\\\Xatlantic\\\\src\\\\assets\\\\hero-patches\")",
+      "Bash(cp \"WhatsApp Image 2026-07-07 at 3.17.14 AM.jpeg\" \"C:\\\\Users\\\\Lenovo\\\\Desktop\\\\Xatlantic\\\\src\\\\assets\\\\hero-patches\\\\shamrock-skull.jpg\")",
+      "Bash(cp \"WhatsApp Image 2026-07-07 at 3.17.14 AM \\(4\\).jpeg\" \"C:\\\\Users\\\\Lenovo\\\\Desktop\\\\Xatlantic\\\\src\\\\assets\\\\hero-patches\\\\usa-flag.jpg\")",
+      "Bash(cp \"WhatsApp Image 2026-07-07 at 3.17.14 AM \\(5\\).jpeg\" \"C:\\\\Users\\\\Lenovo\\\\Desktop\\\\Xatlantic\\\\src\\\\assets\\\\hero-patches\\\\new-york.jpg\")",
+      "Bash(cp \"WhatsApp Image 2026-07-07 at 3.17.15 AM.jpeg\" \"C:\\\\Users\\\\Lenovo\\\\Desktop\\\\Xatlantic\\\\src\\\\assets\\\\hero-patches\\\\money-roll.jpg\")"
     ]
   }
 }

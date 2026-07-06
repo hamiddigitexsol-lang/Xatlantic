@@ -31,6 +31,12 @@ export default function Hero({ selectedProductId }) {
         aria-hidden
       />
 
+      {/* Real patch photos gently floating across the whole hero. Placed
+          after the background layers but before the content in DOM order,
+          so it paints above the texture and below the text/card (which
+          have opaque backgrounds) — no z-index juggling needed. */}
+      <FloatingPatches />
+
       <div className="container-x relative grid items-center gap-12 py-14 lg:grid-cols-[1.05fr_0.95fr] lg:py-20">
         {/* Left — copy */}
         <div className="max-w-xl">
@@ -122,20 +128,14 @@ export default function Hero({ selectedProductId }) {
           </motion.p>
         </div>
 
-        {/* Right — live calculator, with patch photos floating behind it.
-            `isolate` scopes FloatingPatches' negative z-index to this
-            wrapper, so it sits behind the card only — not behind the
-            entire section's opaque background. */}
-        <div className="relative isolate">
-          <FloatingPatches />
-          <motion.div
-            initial={{ opacity: 0, y: 30, scale: 0.98 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
-          >
-            <Calculator selectedProductId={selectedProductId} />
-          </motion.div>
-        </div>
+        {/* Right — live calculator */}
+        <motion.div
+          initial={{ opacity: 0, y: 30, scale: 0.98 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <Calculator selectedProductId={selectedProductId} />
+        </motion.div>
       </div>
     </section>
   )
