@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { CheckCircle2, X } from 'lucide-react'
+import { CheckCircle2, Upload, X } from 'lucide-react'
 import { submitNetlifyForm } from '../lib/netlifyForms'
 
 // Lead-capture modal, pre-filled with the visitor's calculator selections.
@@ -8,6 +8,7 @@ import { submitNetlifyForm } from '../lib/netlifyForms'
 // hidden form ("calculator-quote") in index.html.
 export default function QuoteModal({ open, onClose, summary }) {
   const [form, setForm] = useState({ name: '', email: '', phone: '', notes: '' })
+  const [artwork, setArtwork] = useState(null)
   const [submitted, setSubmitted] = useState(false)
   const [error, setError] = useState(false)
   const [submitting, setSubmitting] = useState(false)
@@ -15,6 +16,7 @@ export default function QuoteModal({ open, onClose, summary }) {
   useEffect(() => {
     if (open) {
       setSubmitted(false)
+      setArtwork(null)
       setForm((f) => ({ ...f, notes: summary?.notes ?? '' }))
     }
   }, [open, summary])
@@ -42,6 +44,7 @@ export default function QuoteModal({ open, onClose, summary }) {
         price_per_unit: lineValue('Price / unit'),
         estimated_total: lineValue('Estimated total'),
         turnaround: lineValue('Turnaround'),
+        ...(artwork ? { artwork } : {}),
       })
       setSubmitted(true)
     } catch (err) {
@@ -122,6 +125,21 @@ export default function QuoteModal({ open, onClose, summary }) {
                     />
                   </div>
                   <Field label="Phone" type="tel" value={form.phone} onChange={update('phone')} placeholder="(optional)" />
+                  <div>
+                    <label className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-muted">
+                      Artwork (optional)
+                    </label>
+                    <label className="flex cursor-pointer items-center gap-3 rounded-xl border border-dashed border-line bg-paper px-4 py-3.5 text-sm text-muted transition-colors hover:border-brand hover:text-brand">
+                      <Upload size={17} />
+                      {artwork?.name || 'Upload your design — AI, EPS, PDF, PNG, or JPG'}
+                      <input
+                        type="file"
+                        className="hidden"
+                        accept=".ai,.eps,.pdf,.png,.jpg,.jpeg,.svg"
+                        onChange={(e) => setArtwork(e.target.files?.[0] ?? null)}
+                      />
+                    </label>
+                  </div>
                   <div>
                     <label className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-muted">
                       Notes
