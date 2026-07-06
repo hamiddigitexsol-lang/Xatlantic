@@ -1,5 +1,7 @@
 # X Atlantic Patches — Multi-Page Marketing Website
 
+_Live at [xatlantic-patches.netlify.app](https://xatlantic-patches.netlify.app), auto-deployed from `main`._
+
 A production-ready, SEO-structured, multi-page marketing site for **X Atlantic Patches**,
 a custom patches & promotional products company. Built with **React (Vite)**,
 **React Router**, **Tailwind CSS**, **Framer Motion**, and **lucide-react**.
