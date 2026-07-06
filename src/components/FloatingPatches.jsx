@@ -7,6 +7,7 @@ import badMoon from '../assets/hero-patches/bad-moon.jpg'
 import compassNavy from '../assets/hero-patches/compass-navy.jpg'
 import compassRed from '../assets/hero-patches/compass-red.jpg'
 import wovenShield from '../assets/hero-patches/woven-shield.jpg'
+import cowboy from '../assets/hero-patches/cowboy.jpg'
 
 // Decorative real patch photos that gently bob all around the hero section.
 // Hidden below `lg` so they never compete with content on smaller screens.
@@ -19,6 +20,7 @@ const patches = [
   { img: badMoon, bottom: '2%', right: '15%', size: 96, rotate: -9, duration: 7.2, delay: 0.6 },
   { img: compassRed, bottom: '9%', right: '-3%', size: 78, rotate: -14, duration: 6.3, delay: 1.6 },
   { img: wovenShield, top: '18%', left: '47%', size: 68, rotate: 11, duration: 7.8, delay: 1 },
+  { img: cowboy, bottom: '6%', left: '46%', size: 72, rotate: -8, duration: 7, delay: 1.4 },
 ]
 
 export default function FloatingPatches() {
