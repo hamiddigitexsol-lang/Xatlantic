@@ -135,5 +135,5 @@ export const navLinks = [
 export const contactInfo = {
   phone: '+1 (800) 555-0142',
   email: 'hello@xatlanticpatches.com',
-  address: '142 Harborline Ave, Suite 7, Atlantic City, NJ 08401',
+  address: '10601 Clarence Dr, Frisco, TX 75033',
 }
