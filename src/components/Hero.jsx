@@ -23,7 +23,7 @@ export default function Hero({ selectedProductId }) {
           z-index) keeps this behind the content below. */}
       <PatchesBackground />
       <div
-        className="pointer-events-none absolute inset-0 bg-navy-900/80"
+        className="pointer-events-none absolute inset-0 bg-navy-900/55"
         aria-hidden
       />
 
