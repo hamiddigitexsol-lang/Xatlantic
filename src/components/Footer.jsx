@@ -49,10 +49,10 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <Link to="/" className="flex items-center gap-2.5">
-              <img src={logoIcon} alt="" className="h-10 w-10 rounded-xl object-cover" />
+              <img src={logoIcon} alt="" className="h-14 w-14 rounded-xl object-cover" />
               <span className="flex flex-col leading-none">
                 <span className="font-display text-base font-extrabold tracking-tight text-white">
-                  ATLANTIC <span className="text-brand-light">PATCHES</span>
+                  XATLANTIC <span className="text-brand-light">PATCHES</span>
                 </span>
                 <span className="mt-1 text-[0.6rem] font-medium uppercase tracking-[0.28em] text-white/50">
                   Custom Emblems
@@ -171,7 +171,7 @@ export default function Footer() {
 
         <div className="h-px w-full bg-white/10" />
         <div className="flex flex-col items-center justify-between gap-3 py-6 text-xs text-white/45 sm:flex-row">
-          <p>© {new Date().getFullYear()} X Atlantic Patches. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Xatlantic Patches. All rights reserved.</p>
           <p className="flex gap-5">
             <a href="#" className="hover:text-white">Privacy Policy</a>
             <a href="#" className="hover:text-white">Terms of Service</a>

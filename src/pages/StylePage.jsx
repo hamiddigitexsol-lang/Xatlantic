@@ -30,7 +30,7 @@ export default function StylePage() {
           '@context': 'https://schema.org',
           '@type': 'Service',
           name: style.h1,
-          provider: { '@type': 'Organization', name: 'X Atlantic Patches' },
+          provider: { '@type': 'Organization', name: 'Xatlantic Patches' },
           description: style.metaDesc,
         }}
       />

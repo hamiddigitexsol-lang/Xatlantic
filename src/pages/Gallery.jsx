@@ -31,7 +31,7 @@ export default function Gallery() {
   return (
     <>
       <Seo
-        title="Custom Patch Gallery — Our Work | X Atlantic Patches"
+        title="Custom Patch Gallery — Our Work | Xatlantic Patches"
         description="Browse examples of our custom embroidered, PVC, chenille, leather and woven patches, plus pins, coins and keychains. See the quality before you order."
         path="/gallery"
       />

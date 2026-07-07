@@ -55,7 +55,7 @@ export default function FaqsPage() {
   return (
     <>
       <Seo
-        title="Custom Patches FAQs — Ordering, Materials & Shipping | X Atlantic Patches"
+        title="Custom Patches FAQs — Ordering, Materials & Shipping | Xatlantic Patches"
         description="Answers to common custom patch questions: minimum orders, file formats, backing options, washability, pricing and delivery times."
         path="/about/faqs"
         jsonLd={jsonLd}

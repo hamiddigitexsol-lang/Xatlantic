@@ -10,7 +10,7 @@ export default function StylesIndex() {
   return (
     <>
       <Seo
-        title="Custom Patches by Style & Industry | X Atlantic Patches"
+        title="Custom Patches by Style & Industry | Xatlantic Patches"
         description="Find the right custom patch for your organization: military, fire department, police, EMS, morale, scouts, sports teams, bikers, name patches and merit badges."
         path="/patches"
       />

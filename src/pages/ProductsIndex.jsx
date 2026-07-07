@@ -7,7 +7,7 @@ export default function ProductsIndex() {
   return (
     <>
       <Seo
-        title="Custom Patches & Promotional Products — Full Catalog | X Atlantic Patches"
+        title="Custom Patches & Promotional Products — Full Catalog | Xatlantic Patches"
         description="Browse every custom product we make: embroidered, woven, PVC, chenille, leather & dye sublimation patches, plus enamel pins, challenge coins, keychains and more."
         path="/products"
       />

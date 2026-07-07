@@ -100,7 +100,8 @@
       "Bash(cp \"WhatsApp Image 2026-07-07 at 3.17.14 AM \\(5\\).jpeg\" \"C:\\\\Users\\\\Lenovo\\\\Desktop\\\\Xatlantic\\\\src\\\\assets\\\\hero-patches\\\\new-york.jpg\")",
       "Bash(cp \"WhatsApp Image 2026-07-07 at 3.17.15 AM.jpeg\" \"C:\\\\Users\\\\Lenovo\\\\Desktop\\\\Xatlantic\\\\src\\\\assets\\\\hero-patches\\\\money-roll.jpg\")",
       "Bash(rm -f icon-test.png icon-test2.png lockup-test.png lockup-test2.png)",
-      "Bash(npm uninstall *)"
+      "Bash(npm uninstall *)",
+      "Bash(grep -rl \"X Atlantic Patches\" \"C:\\\\Users\\\\Lenovo\\\\Desktop\\\\Xatlantic\\\\src\" \"C:\\\\Users\\\\Lenovo\\\\Desktop\\\\Xatlantic\\\\index.html\")"
     ]
   }
 }

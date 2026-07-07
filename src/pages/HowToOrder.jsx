@@ -32,7 +32,7 @@ export default function HowToOrder() {
   return (
     <>
       <Seo
-        title="How to Order Custom Patches — 4 Simple Steps | X Atlantic Patches"
+        title="How to Order Custom Patches — 4 Simple Steps | Xatlantic Patches"
         description="Ordering custom patches is easy: send artwork, approve your free proof and quote, we produce, you receive. Most orders ship in 7–10 business days."
         path="/about/how-to-order"
       />

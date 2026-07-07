@@ -9,11 +9,11 @@ import logoIcon from '../assets/logo-icon.png'
 
 function Logo({ onClick }) {
   return (
-    <Link to="/" onClick={onClick} className="group flex items-center gap-2.5 leading-none" aria-label="X Atlantic Patches — home">
-      <img src={logoIcon} alt="" className="h-10 w-10 rounded-xl object-cover" />
+    <Link to="/" onClick={onClick} className="group flex items-center gap-2.5 leading-none" aria-label="Xatlantic Patches — home">
+      <img src={logoIcon} alt="" className="h-14 w-14 rounded-xl object-cover" />
       <span className="flex flex-col">
         <span className="font-display text-base font-extrabold tracking-tight text-navy-900">
-          ATLANTIC <span className="text-brand">PATCHES</span>
+          XATLANTIC <span className="text-brand">PATCHES</span>
         </span>
         <span className="text-[0.6rem] font-medium uppercase tracking-[0.28em] text-muted">Custom Emblems</span>
       </span>

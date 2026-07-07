@@ -12,7 +12,7 @@ export default function Pricing() {
   return (
     <>
       <Seo
-        title="Custom Patch Pricing — Instant Online Calculator | X Atlantic Patches"
+        title="Custom Patch Pricing — Instant Online Calculator | Xatlantic Patches"
         description="See exact custom patch pricing instantly. Prices based on size, quantity and backing with volume discounts up to 45%. No sign-up, no waiting — calculate now."
         path="/pricing"
       />

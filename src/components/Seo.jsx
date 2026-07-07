@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 // Lightweight per-page SEO: sets the document title, meta description,
 // canonical URL, and optional JSON-LD structured data on route change.
 // (No extra dependency needed — works with any React Router page.)
-const SITE_NAME = 'X Atlantic Patches'
+const SITE_NAME = 'Xatlantic Patches'
 const SITE_URL = 'https://www.xatlanticpatches.com'
 
 function upsertMeta(name, content) {

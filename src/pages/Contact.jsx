@@ -16,7 +16,7 @@ export default function Contact() {
   return (
     <>
       <Seo
-        title="Contact Us — Free Quotes & Samples | X Atlantic Patches"
+        title="Contact Us — Free Quotes & Samples | Xatlantic Patches"
         description="Get a free custom patch quote, request a sample, or talk to our team. We reply within one business day with pricing and a free digital proof."
         path="/contact"
       />

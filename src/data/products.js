@@ -31,7 +31,7 @@ export const patches = [
     image: embroideredImg,
     description:
       'Classic, tactile, and built to last. Dense stitching renders logos and lettering with crisp, dimensional definition.',
-    seoTitle: 'Custom Embroidered Patches | X Atlantic Patches',
+    seoTitle: 'Custom Embroidered Patches | Xatlantic Patches',
     metaDesc:
       'Order custom embroidered patches with up to 100% thread coverage. Iron-on, sew-on & Velcro backings, low minimums, free proof. Price yours instantly.',
     intro:
@@ -63,7 +63,7 @@ export const patches = [
     image: chenilleImg,
     description:
       'The plush, varsity-letterman texture. A premium, oversized statement piece for jackets, teams, and apparel lines.',
-    seoTitle: 'Custom Chenille Patches — Varsity Style | X Atlantic Patches',
+    seoTitle: 'Custom Chenille Patches — Varsity Style | Xatlantic Patches',
     metaDesc:
       'Custom chenille patches with that classic varsity letterman look. Plush yarn texture, low minimums and a free digital proof. Get instant pricing.',
     intro:
@@ -95,7 +95,7 @@ export const patches = [
     image: pvcImg,
     description:
       'Weatherproof, flexible, and sharp. Molded 2D/3D detail that holds up on gear, packs, and tactical kit.',
-    seoTitle: 'Custom PVC Patches — 2D & 3D | X Atlantic Patches',
+    seoTitle: 'Custom PVC Patches — 2D & 3D | Xatlantic Patches',
     metaDesc:
       'Custom PVC rubber patches molded in 2D or 3D. Waterproof, UV-stable and built for tactical gear and outdoor brands. Low minimums, instant pricing.',
     intro:
@@ -127,7 +127,7 @@ export const patches = [
     image: siliconeImg,
     description:
       'Soft-touch, low-profile branding. A modern, athletic finish ideal for performance and lifestyle apparel.',
-    seoTitle: 'Custom Silicone Patches — Soft-Touch | X Atlantic Patches',
+    seoTitle: 'Custom Silicone Patches — Soft-Touch | Xatlantic Patches',
     metaDesc:
       'Custom silicone patches with a soft, flexible, low-profile finish. Front-side heat-seal application for performance apparel and headwear. Price yours instantly.',
     intro:
@@ -159,7 +159,7 @@ export const patches = [
     image: leatherImg,
     description:
       'Debossed genuine or vegan leather. The heritage, premium-label look for headwear, denim, and workwear.',
-    seoTitle: 'Custom Leather Patches — Debossed | X Atlantic Patches',
+    seoTitle: 'Custom Leather Patches — Debossed | Xatlantic Patches',
     metaDesc:
       'Custom leather patches in genuine or vegan leather — debossed, laser-engraved, or printed. The premium label for hats and workwear. Low minimums, free proof.',
     intro:
@@ -191,7 +191,7 @@ export const patches = [
     image: wovenImg,
     description:
       'Finer thread, finer detail. Woven construction captures small text and intricate artwork with a smooth finish.',
-    seoTitle: 'Custom Woven Patches — Fine Detail | X Atlantic Patches',
+    seoTitle: 'Custom Woven Patches — Fine Detail | Xatlantic Patches',
     metaDesc:
       'Custom woven patches capture fine lines and small text that embroidery can’t. Thin, smooth finish with merrowed or laser-cut edges. Instant pricing.',
     intro:
@@ -223,7 +223,7 @@ export const patches = [
     image: sublimatedImg,
     description:
       'Full-color, photo-grade printing with unlimited gradients. Perfect for complex, vibrant, detailed designs.',
-    seoTitle: 'Custom Dye Sublimation Patches | X Atlantic Patches',
+    seoTitle: 'Custom Dye Sublimation Patches | Xatlantic Patches',
     metaDesc:
       'Custom dye sublimation patches print photographs and unlimited colors directly into the fabric. Perfect for complex artwork. Low minimums, instant quote.',
     intro:
@@ -255,7 +255,7 @@ export const patches = [
     image: metflexImg,
     description:
       'A metallic, reflective sheen with flexible backing. Eye-catching luxe detail for premium emblem work.',
-    seoTitle: 'Custom Metflex Patches — Metallic | X Atlantic Patches',
+    seoTitle: 'Custom Metflex Patches — Metallic | Xatlantic Patches',
     metaDesc:
       'Custom Metflex patches: thin, lightweight and metallic with full-color print options. A modern reflective finish for fashion apparel. Request a quote.',
     intro:
@@ -290,7 +290,7 @@ export const otherProducts = [
     image: lapelPinImg,
     description:
       'Hard & soft enamel pins with jeweler-grade plating. Collectible, giftable, and endlessly customizable.',
-    seoTitle: 'Custom Lapel Pins — Hard & Soft Enamel | X Atlantic Patches',
+    seoTitle: 'Custom Lapel Pins — Hard & Soft Enamel | Xatlantic Patches',
     metaDesc:
       'Custom enamel lapel pins with jeweler-grade plating in gold, silver or black nickel. Hard and soft enamel, low minimums, free proof. Price your pins instantly.',
     intro:
@@ -322,7 +322,7 @@ export const otherProducts = [
     image: keychainImg,
     description:
       'Durable custom keychains in PVC, metal, and leather. A practical, everyday-carry brand touchpoint.',
-    seoTitle: 'Custom Keychains — PVC, Metal & Leather | X Atlantic Patches',
+    seoTitle: 'Custom Keychains — PVC, Metal & Leather | Xatlantic Patches',
     metaDesc:
       'Custom keychains in PVC, embroidered, leather and metal styles. Durable everyday-carry merch with your logo. Low minimums and instant online pricing.',
     intro:
@@ -354,7 +354,7 @@ export const otherProducts = [
     image: coinImg,
     description:
       'Die-struck metal coins with antique or polished finishes. The standard for recognition, military, and civic pride.',
-    seoTitle: 'Custom Challenge Coins | X Atlantic Patches',
+    seoTitle: 'Custom Challenge Coins | Xatlantic Patches',
     metaDesc:
       'Custom challenge coins die-struck in brass with antique or polished finishes. Military, first responder and corporate recognition coins. Price yours instantly.',
     intro:
@@ -386,7 +386,7 @@ export const otherProducts = [
     image: socksImg,
     description:
       'Knit-in branded socks in your colorway. Soft, comfortable, and unexpectedly memorable merch.',
-    seoTitle: 'Custom Socks — Knit-In Logo Socks | X Atlantic Patches',
+    seoTitle: 'Custom Socks — Knit-In Logo Socks | Xatlantic Patches',
     metaDesc:
       'Custom knit socks with your logo woven directly into the fabric — not printed. Dress and athletic styles in your brand colors. Request a free quote today.',
     intro:
@@ -418,7 +418,7 @@ export const otherProducts = [
     image: shoeCharmsImg,
     description:
       'Custom PVC charms for clogs and laces. A playful, on-trend product for fan and lifestyle brands.',
-    seoTitle: 'Custom Shoe Charms — Croc & Lace Charms | X Atlantic Patches',
+    seoTitle: 'Custom Shoe Charms — Croc & Lace Charms | Xatlantic Patches',
     metaDesc:
       'Custom PVC shoe charms for clogs and laces. Turn your logo or characters into collectible charms fans love. Low minimums and fast, free quotes.',
     intro:
@@ -450,7 +450,7 @@ export const otherProducts = [
     image: beaniesImg,
     description:
       'Premium knit beanies finished with your patch or woven label. Cold-weather merch that gets worn for years.',
-    seoTitle: 'Custom Beanies with Your Patch | X Atlantic Patches',
+    seoTitle: 'Custom Beanies with Your Patch | Xatlantic Patches',
     metaDesc:
       'Custom knit beanies finished with your leather, woven or embroidered patch. Premium cold-weather merch in your brand colors. Request a free quote.',
     intro:
@@ -482,7 +482,7 @@ export const otherProducts = [
     image: scarvesImg,
     description:
       'Woven and printed scarves for supporters, teams, and luxury gifting. Soft hand-feel, vivid color retention.',
-    seoTitle: 'Custom Team Scarves | X Atlantic Patches',
+    seoTitle: 'Custom Team Scarves | Xatlantic Patches',
     metaDesc:
       'Custom woven supporter scarves and printed scarves for teams, clubs and events. Soft hand-feel, vivid knit-in color, tassel finishing. Request a free quote.',
     intro:

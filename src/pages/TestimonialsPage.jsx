@@ -7,7 +7,7 @@ export default function TestimonialsPage() {
   return (
     <>
       <Seo
-        title="Customer Testimonials & Reviews | X Atlantic Patches"
+        title="Customer Testimonials & Reviews | Xatlantic Patches"
         description="Read what brands, teams and first responders say about our custom patches, pins and coins — quality, service and turnaround reviewed by real customers."
         path="/about/testimonials"
       />

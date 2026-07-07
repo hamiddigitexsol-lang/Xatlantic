@@ -11,13 +11,13 @@ export default function Home() {
   return (
     <>
       <Seo
-        title="Custom Patches — Embroidered, PVC, Leather & More | X Atlantic Patches"
+        title="Custom Patches — Embroidered, PVC, Leather & More | Xatlantic Patches"
         description="Design custom patches online: embroidered, woven, PVC, chenille, leather & dye sublimation. Instant pricing, low minimums, free proof, fast turnaround. Start your quote."
         path="/"
         jsonLd={{
           '@context': 'https://schema.org',
           '@type': 'Organization',
-          name: 'X Atlantic Patches',
+          name: 'Xatlantic Patches',
           url: 'https://www.xatlanticpatches.com',
           description:
             'Custom patches and promotional products manufacturer — embroidered, woven, PVC, chenille, leather, and dye sublimation patches plus pins, coins, and keychains.',

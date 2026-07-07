@@ -29,7 +29,7 @@ export default function ProductPage() {
           '@type': 'Product',
           name: product.plural,
           description: product.metaDesc,
-          brand: { '@type': 'Brand', name: 'X Atlantic Patches' },
+          brand: { '@type': 'Brand', name: 'Xatlantic Patches' },
           offers: {
             '@type': 'AggregateOffer',
             priceCurrency: 'USD',

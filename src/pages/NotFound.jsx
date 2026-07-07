@@ -4,7 +4,7 @@ import Seo from '../components/Seo'
 export default function NotFound() {
   return (
     <>
-      <Seo title="Page Not Found | X Atlantic Patches" description="This page could not be found." path="/404" />
+      <Seo title="Page Not Found | Xatlantic Patches" description="This page could not be found." path="/404" />
       <section className="flex min-h-[60vh] items-center bg-white">
         <div className="container-x py-20 text-center">
           <p className="font-display text-7xl font-extrabold text-brand">404</p>

@@ -33,14 +33,14 @@ export default function About() {
   return (
     <>
       <Seo
-        title="About Us — A Detail-Obsessed Custom Patch Company | X Atlantic Patches"
-        description="X Atlantic Patches crafts custom patches, pins and coins for brands, teams, military and first responders. Learn about our story, values and quality guarantee."
+        title="About Us — A Detail-Obsessed Custom Patch Company | Xatlantic Patches"
+        description="Xatlantic Patches crafts custom patches, pins and coins for brands, teams, military and first responders. Learn about our story, values and quality guarantee."
         path="/about"
       />
       <PageHero
         crumbs={[{ label: 'About Us' }]}
         title="The Patch Company That Sweats the Small Stuff"
-        intro="X Atlantic Patches exists for one reason: too many teams and brands settle for emblems that look fine from ten feet and cheap from two. We make the ones that hold up close."
+        intro="Xatlantic Patches exists for one reason: too many teams and brands settle for emblems that look fine from ten feet and cheap from two. We make the ones that hold up close."
       />
 
       <section className="bg-white py-14 sm:py-20">
@@ -49,7 +49,7 @@ export default function About() {
             <div className="space-y-5 leading-relaxed text-ink">
               <h2 className="text-2xl font-extrabold text-navy-900">Our story</h2>
               <p>
-                We started X Atlantic Patches after years inside the promotional-products industry
+                We started Xatlantic Patches after years inside the promotional-products industry
                 watching quality get traded away for pennies. Patches were treated as commodities —
                 but to the people wearing them, they never were. A unit insignia, a fire house
                 crest, a first jersey patch: these things carry identity.
