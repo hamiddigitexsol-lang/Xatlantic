@@ -20,29 +20,78 @@ const photos = [
   cowboy,
 ]
 
-// Slight per-tile rotation so the wall of patches reads as an organic pile
-// of real patches rather than a clean, obviously-repeating grid.
-const rotations = [-6, 4, -3, 7, -8, 5, -4, 6, -5, 3, -7, 8]
+// Deterministic pseudo-random generator (mulberry32) so the "scattered flat
+// lay" arrangement is stable across renders instead of reshuffling.
+function seededRandom(seed) {
+  let t = seed
+  return () => {
+    t += 0x6d2b79f5
+    let r = Math.imul(t ^ (t >>> 15), 1 | t)
+    r = (r + Math.imul(r ^ (r >>> 7), 61 | r)) ^ r
+    return ((r ^ (r >>> 14)) >>> 0) / 4294967296
+  }
+}
 
-// Full-bleed collage of real patch photos covering the entire hero, with a
-// dark scrim on top (applied by the caller) so text stays readable — same
-// composition as a typical patch-supplier hero banner.
+// Lay out patches on a loose grid with per-cell jitter, varied size and
+// rotation, so it reads as a real photographed pile of patches rather than
+// a mechanical repeating tile grid.
+function buildLayout() {
+  const rand = seededRandom(20260706)
+  const cols = 8
+  const rows = 5
+  const cellW = 100 / cols
+  const cellH = 100 / rows
+  const cards = []
+  let i = 0
+  for (let row = 0; row < rows; row++) {
+    for (let col = 0; col < cols; col++) {
+      const jitterX = (rand() - 0.5) * cellW * 0.7
+      const jitterY = (rand() - 0.5) * cellH * 0.7
+      const centerX = col * cellW + cellW / 2 + jitterX
+      const centerY = row * cellH + cellH / 2 + jitterY
+      const size = 12 + rand() * 8 // 12–20% of section width
+      const rotate = Math.round((rand() - 0.5) * 36) // -18..18deg
+      cards.push({
+        img: photos[i % photos.length],
+        left: `${centerX}%`,
+        top: `${centerY}%`,
+        size: `${size}%`,
+        rotate,
+        depth: rand(), // controls paint order only — see note below
+      })
+      i++
+    }
+  }
+  // Sort by depth so overlap looks natural. No z-index is used anywhere —
+  // relying on explicit integer z-index here previously leaked past this
+  // component's local stacking and painted patches on top of the actual
+  // hero content (headline/calculator). Plain DOM order is layering enough.
+  return cards.sort((a, b) => a.depth - b.depth)
+}
+
+const cards = buildLayout()
+
+// Full-bleed "flat lay" of real patch photos covering the entire hero — a
+// dynamic gradient scrim (applied by the caller) sits on top so text stays
+// readable while still showing depth/light across the pile.
 export default function PatchesBackground() {
-  const tileCount = 36
   return (
     <div className="absolute inset-0 overflow-hidden" aria-hidden>
-      <div className="grid h-full w-full grid-cols-6 sm:grid-cols-8 lg:grid-cols-10">
-        {Array.from({ length: tileCount }).map((_, i) => (
-          <div key={i} className="relative -m-[6%] overflow-hidden">
-            <img
-              src={photos[i % photos.length]}
-              alt=""
-              className="h-full w-full scale-125 object-cover"
-              style={{ transform: `rotate(${rotations[i % rotations.length]}deg) scale(1.25)` }}
-            />
-          </div>
-        ))}
-      </div>
+      {cards.map((c, i) => (
+        <div
+          key={i}
+          className="absolute -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-2xl border-2 border-white/10 shadow-[0_18px_40px_-12px_rgba(0,0,0,0.65)]"
+          style={{
+            left: c.left,
+            top: c.top,
+            width: c.size,
+            aspectRatio: '1 / 1',
+            transform: `translate(-50%, -50%) rotate(${c.rotate}deg)`,
+          }}
+        >
+          <img src={c.img} alt="" className="h-full w-full object-cover" />
+        </div>
+      ))}
     </div>
   )
 }

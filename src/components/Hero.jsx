@@ -17,13 +17,24 @@ const bullets = ['Low order minimums', 'Free digital proof', 'Ships in as few as
 
 export default function Hero({ selectedProductId }) {
   return (
-    <section id="home" className="relative overflow-hidden bg-navy-900">
-      {/* Full-bleed wall of real patch photos, with a dark scrim on top so
-          the white/light text on the right reads clearly. DOM order (not
-          z-index) keeps this behind the content below. */}
+    <section id="home" className="relative isolate overflow-hidden bg-navy-900">
+      {/* Full-bleed "flat lay" of real patch photos, with a directional
+          scrim on top — darkest on the left (behind the text) and lighter
+          toward the calculator, plus a soft vignette for depth. DOM order
+          (not z-index) keeps this behind the content below. */}
       <PatchesBackground />
+      {/* Guaranteed baseline contrast at every breakpoint (mobile stacks to
+          a single column, so the left-vs-right split below isn't enough on
+          its own). */}
+      <div className="pointer-events-none absolute inset-0 bg-navy-900/75" aria-hidden />
       <div
-        className="pointer-events-none absolute inset-0 bg-navy-900/55"
+        className="pointer-events-none absolute inset-0 hidden lg:block"
+        style={{
+          background:
+            'radial-gradient(120% 90% at 15% 20%, rgba(8,19,33,0.35), transparent 60%), ' +
+            'linear-gradient(115deg, rgba(8,19,33,0.55) 15%, rgba(8,19,33,0.35) 45%, rgba(8,19,33,0.2) 70%, rgba(8,19,33,0.1) 100%), ' +
+            'radial-gradient(140% 100% at 50% 100%, rgba(8,19,33,0.35), transparent 55%)',
+        }}
         aria-hidden
       />
 
@@ -46,7 +57,7 @@ export default function Hero({ selectedProductId }) {
             initial="hidden"
             animate="show"
             custom={1}
-            className="mt-5 text-4xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-6xl"
+            className="mt-5 text-4xl font-extrabold leading-[1.08] tracking-tight text-white [text-shadow:0_2px_16px_rgba(0,0,0,0.5)] sm:text-5xl lg:text-6xl"
           >
             Custom emblems —{' '}
             <span className="relative whitespace-nowrap text-brand-light">
@@ -68,7 +79,7 @@ export default function Hero({ selectedProductId }) {
             initial="hidden"
             animate="show"
             custom={2}
-            className="mt-5 text-lg leading-relaxed text-white/75"
+            className="mt-5 text-lg leading-relaxed text-white/85 [text-shadow:0_1px_10px_rgba(0,0,0,0.45)]"
           >
             Your one-stop shop for turning ideas into reality. From embroidered and leather patches
             to challenge coins and pins — crafted with personalized service and quality you’ll love.
