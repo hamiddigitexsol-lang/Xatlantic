@@ -9,7 +9,7 @@ export const styles = [
     slug: 'military-patches',
     name: 'Military Patches',
     h1: 'Custom Military Patches',
-    seoTitle: 'Custom Military Patches — Unit, Rank & Insignia | X Atlantic Patches',
+    seoTitle: 'Custom Military Patches — Unit & Rank | X Atlantic Patches',
     metaDesc:
       'Custom military patches for every branch — unit insignia, rank, name tapes and morale designs. Regulation-quality embroidery, Velcro backing, low minimums.',
     intro:
@@ -25,7 +25,7 @@ export const styles = [
     slug: 'army-patches',
     name: 'Army Patches',
     h1: 'Custom Army Patches',
-    seoTitle: 'Custom Army Patches — Unit & Morale Designs | X Atlantic Patches',
+    seoTitle: 'Custom Army Patches | X Atlantic Patches',
     metaDesc:
       'Custom Army patches: unit insignia, shoulder sleeve patches, name tapes and morale patches. OCP-compatible colors, Velcro backing, fast turnaround.',
     intro:
@@ -41,7 +41,7 @@ export const styles = [
     slug: 'navy-patches',
     name: 'Navy Patches',
     h1: 'Custom Navy Patches',
-    seoTitle: 'Custom Navy Patches — Squadron & Ship Crests | X Atlantic Patches',
+    seoTitle: 'Custom Navy Patches — Ship Crests | X Atlantic Patches',
     metaDesc:
       'Custom Navy patches for squadrons, ships and commands. Detailed crest embroidery, flight-jacket patches and morale designs. Low minimums, free proof.',
     intro:
@@ -57,7 +57,7 @@ export const styles = [
     slug: 'air-force-patches',
     name: 'Air Force Patches',
     h1: 'Custom Air Force Patches',
-    seoTitle: 'Custom Air Force Patches — Squadron & Morale | X Atlantic Patches',
+    seoTitle: 'Custom Air Force Patches | X Atlantic Patches',
     metaDesc:
       'Custom Air Force patches for squadrons, wings and crews. Heritage roundels, nametags and morale patches with Velcro backing. Price yours instantly.',
     intro:
@@ -73,7 +73,7 @@ export const styles = [
     slug: 'fire-department-patches',
     name: 'Fire Department Patches',
     h1: 'Custom Fire Department Patches',
-    seoTitle: 'Custom Fire Department Patches — Firefighter Shoulder Patches | X Atlantic Patches',
+    seoTitle: 'Custom Fire Department Patches | X Atlantic Patches',
     metaDesc:
       'Custom fire department patches: shoulder patches, Maltese crosses, station numbers and memorial designs. Durable embroidery built for turnout wear.',
     intro:
@@ -89,7 +89,7 @@ export const styles = [
     slug: 'police-patches',
     name: 'Police Patches',
     h1: 'Custom Police Patches',
-    seoTitle: 'Custom Police Patches — Law Enforcement Shoulder Patches | X Atlantic Patches',
+    seoTitle: 'Custom Police Patches | X Atlantic Patches',
     metaDesc:
       'Custom police patches for departments and units: shoulder patches, badges, K9 and SWAT insignia. Uniform-grade embroidery with precise detail.',
     intro:
@@ -105,7 +105,7 @@ export const styles = [
     slug: 'ems-patches',
     name: 'EMS Patches',
     h1: 'Custom EMS Patches',
-    seoTitle: 'Custom EMS Patches — Paramedic & EMT Insignia | X Atlantic Patches',
+    seoTitle: 'Custom EMS Patches — Paramedic & EMT | X Atlantic Patches',
     metaDesc:
       'Custom EMS patches for paramedics, EMTs and rescue squads. Star of Life designs, certification rockers and unit patches. Low minimums, free proof.',
     intro:
@@ -121,7 +121,7 @@ export const styles = [
     slug: 'first-responder-patches',
     name: 'First Responder Patches',
     h1: 'Custom First Responder Patches',
-    seoTitle: 'Custom First Responder Patches — Fire, Police & EMS | X Atlantic Patches',
+    seoTitle: 'Custom First Responder Patches | X Atlantic Patches',
     metaDesc:
       'Custom first responder patches honoring fire, police, EMS and dispatch. Unit insignia, thin-line designs and memorial patches. Fast, free quotes.',
     intro:
@@ -137,7 +137,7 @@ export const styles = [
     slug: 'morale-patches',
     name: 'Morale Patches',
     h1: 'Custom Morale Patches',
-    seoTitle: 'Custom Morale Patches — Velcro PVC & Embroidered | X Atlantic Patches',
+    seoTitle: 'Custom Morale Patches | X Atlantic Patches',
     metaDesc:
       'Custom morale patches in PVC or embroidery with Velcro backing. Humorous, unit-pride and collectible designs for military, gyms and teams. Instant pricing.',
     intro:
@@ -153,7 +153,7 @@ export const styles = [
     slug: 'scout-patches',
     name: 'Scout Patches',
     h1: 'Custom Scout & Troop Patches',
-    seoTitle: 'Custom Scout Patches — Troop & Merit Designs | X Atlantic Patches',
+    seoTitle: 'Custom Scout Patches — Troop Designs | X Atlantic Patches',
     metaDesc:
       'Custom scout patches for troops, packs and councils. Rank designs, camp commemoratives and trading patches kids love. Low minimums for small troops.',
     intro:
@@ -169,7 +169,7 @@ export const styles = [
     slug: 'sports-patches',
     name: 'Sports Patches',
     h1: 'Custom Sports Patches',
-    seoTitle: 'Custom Sports Patches — Team Logos & Championships | X Atlantic Patches',
+    seoTitle: 'Custom Sports Patches — Team Logos | X Atlantic Patches',
     metaDesc:
       'Custom sports patches for teams and leagues: jersey crests, championship commemoratives and varsity letters. Durable stitching for game-day wear.',
     intro:
@@ -185,7 +185,7 @@ export const styles = [
     slug: 'biker-patches',
     name: 'Biker Patches',
     h1: 'Custom Biker Patches',
-    seoTitle: 'Custom Biker Patches — Vest Back Patches & Rockers | X Atlantic Patches',
+    seoTitle: 'Custom Biker Patches — Vest & Rockers | X Atlantic Patches',
     metaDesc:
       'Custom biker patches: large back patches, rockers, and club insignia stitched for leather vests. Bold embroidery up to 12 inches. Free digital proof.',
     intro:
@@ -201,7 +201,7 @@ export const styles = [
     slug: 'name-patches',
     name: 'Name Patches',
     h1: 'Custom Name Patches',
-    seoTitle: 'Custom Name Patches — Uniform & Workwear Names | X Atlantic Patches',
+    seoTitle: 'Custom Name Patches for Workwear | X Atlantic Patches',
     metaDesc:
       'Custom name patches for uniforms and workwear. Classic oval and rectangular styles, script or block lettering, iron-on or sew-on. Order from 25 pieces.',
     intro:
@@ -217,7 +217,7 @@ export const styles = [
     slug: 'merit-badges',
     name: 'Merit Badges',
     h1: 'Custom Merit Badges',
-    seoTitle: 'Custom Merit Badges — Achievement Patches | X Atlantic Patches',
+    seoTitle: 'Custom Merit Badges | X Atlantic Patches',
     metaDesc:
       'Custom merit badges and achievement patches for clubs, camps, schools and corporate programs. Collectible round designs from 1.5". Low minimums.',
     intro:

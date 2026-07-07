@@ -31,9 +31,9 @@ export const patches = [
     image: embroideredImg,
     description:
       'Classic, tactile, and built to last. Dense stitching renders logos and lettering with crisp, dimensional definition.',
-    seoTitle: 'Custom Embroidered Patches — Iron-On & Sew-On | X Atlantic Patches',
+    seoTitle: 'Custom Embroidered Patches | X Atlantic Patches',
     metaDesc:
-      'Order custom embroidered patches with up to 100% thread coverage. Iron-on, sew-on & Velcro backings, low minimums, free proof, fast turnaround. Price yours instantly.',
+      'Order custom embroidered patches with up to 100% thread coverage. Iron-on, sew-on & Velcro backings, low minimums, free proof. Price yours instantly.',
     intro:
       'Embroidered patches are the industry standard for a reason: raised thread on a twill base gives your logo bold color, real texture, and decades of durability. We digitize your artwork stitch by stitch, so lettering stays sharp and colors stay true — wash after wash.',
     features: [
@@ -63,9 +63,9 @@ export const patches = [
     image: chenilleImg,
     description:
       'The plush, varsity-letterman texture. A premium, oversized statement piece for jackets, teams, and apparel lines.',
-    seoTitle: 'Custom Chenille Patches — Varsity Letterman Style | X Atlantic Patches',
+    seoTitle: 'Custom Chenille Patches — Varsity Style | X Atlantic Patches',
     metaDesc:
-      'Custom chenille patches with that classic varsity letterman look. Plush yarn texture, bold felt backing, low minimums and a free digital proof. Get instant pricing.',
+      'Custom chenille patches with that classic varsity letterman look. Plush yarn texture, low minimums and a free digital proof. Get instant pricing.',
     intro:
       'Chenille patches bring the unmistakable varsity-jacket feel: looped yarn piled high on a felt base for a soft, dimensional finish you can see across a room. Perfect for letters, mascots, and statement-scale designs.',
     features: [
@@ -95,9 +95,9 @@ export const patches = [
     image: pvcImg,
     description:
       'Weatherproof, flexible, and sharp. Molded 2D/3D detail that holds up on gear, packs, and tactical kit.',
-    seoTitle: 'Custom PVC Patches — Durable 2D & 3D Rubber Patches | X Atlantic Patches',
+    seoTitle: 'Custom PVC Patches — 2D & 3D | X Atlantic Patches',
     metaDesc:
-      'Custom PVC rubber patches molded in 2D or 3D. Waterproof, UV-stable and built for tactical gear, morale patches and outdoor brands. Low minimums, instant pricing.',
+      'Custom PVC rubber patches molded in 2D or 3D. Waterproof, UV-stable and built for tactical gear and outdoor brands. Low minimums, instant pricing.',
     intro:
       'PVC patches are molded, not stitched — which means crisp raised detail, unlimited color matching, and a patch that shrugs off water, mud, and sun. The go-to choice for tactical, outdoor, and morale designs.',
     features: [
@@ -127,7 +127,7 @@ export const patches = [
     image: siliconeImg,
     description:
       'Soft-touch, low-profile branding. A modern, athletic finish ideal for performance and lifestyle apparel.',
-    seoTitle: 'Custom Silicone Patches — Soft-Touch Heat Seal | X Atlantic Patches',
+    seoTitle: 'Custom Silicone Patches — Soft-Touch | X Atlantic Patches',
     metaDesc:
       'Custom silicone patches with a soft, flexible, low-profile finish. Front-side heat-seal application for performance apparel and headwear. Price yours instantly.',
     intro:
@@ -159,9 +159,9 @@ export const patches = [
     image: leatherImg,
     description:
       'Debossed genuine or vegan leather. The heritage, premium-label look for headwear, denim, and workwear.',
-    seoTitle: 'Custom Leather Patches — Debossed & Laser Engraved | X Atlantic Patches',
+    seoTitle: 'Custom Leather Patches — Debossed | X Atlantic Patches',
     metaDesc:
-      'Custom leather patches in genuine or vegan leather — debossed, laser-engraved, or printed. The premium label for hats, denim and workwear. Low minimums, free proof.',
+      'Custom leather patches in genuine or vegan leather — debossed, laser-engraved, or printed. The premium label for hats and workwear. Low minimums, free proof.',
     intro:
       'Nothing says premium like leather. We deboss, laser-engrave, or print your mark on genuine or vegan leather for a rich, heritage finish that gets better with age — the signature look of craft brands and quality headwear.',
     features: [
@@ -191,9 +191,9 @@ export const patches = [
     image: wovenImg,
     description:
       'Finer thread, finer detail. Woven construction captures small text and intricate artwork with a smooth finish.',
-    seoTitle: 'Custom Woven Patches — Fine Detail & Small Text | X Atlantic Patches',
+    seoTitle: 'Custom Woven Patches — Fine Detail | X Atlantic Patches',
     metaDesc:
-      'Custom woven patches capture fine lines, small text and intricate logos that embroidery can’t. Thin, smooth finish with merrowed or laser-cut edges. Instant pricing.',
+      'Custom woven patches capture fine lines and small text that embroidery can’t. Thin, smooth finish with merrowed or laser-cut edges. Instant pricing.',
     intro:
       'Woven patches are made on a loom with thread far finer than embroidery, so small text, thin lines, and complex logos come out crisp and legible. Thinner and smoother than embroidered, with the same durability.',
     features: [
@@ -223,9 +223,9 @@ export const patches = [
     image: sublimatedImg,
     description:
       'Full-color, photo-grade printing with unlimited gradients. Perfect for complex, vibrant, detailed designs.',
-    seoTitle: 'Custom Dye Sublimation Patches — Photo-Quality Print | X Atlantic Patches',
+    seoTitle: 'Custom Dye Sublimation Patches | X Atlantic Patches',
     metaDesc:
-      'Custom dye sublimation patches print photographs, gradients and unlimited colors directly into the fabric. Perfect for complex artwork. Low minimums, instant quote.',
+      'Custom dye sublimation patches print photographs and unlimited colors directly into the fabric. Perfect for complex artwork. Low minimums, instant quote.',
     intro:
       'Dye sublimation bonds ink into the fabric itself, so photographs, gradients, and unlimited-color artwork reproduce with near-photographic accuracy. When thread can’t capture your design, sublimation can.',
     features: [
@@ -255,9 +255,9 @@ export const patches = [
     image: metflexImg,
     description:
       'A metallic, reflective sheen with flexible backing. Eye-catching luxe detail for premium emblem work.',
-    seoTitle: 'Custom Metflex Patches — Metallic Flexible Patches | X Atlantic Patches',
+    seoTitle: 'Custom Metflex Patches — Metallic | X Atlantic Patches',
     metaDesc:
-      'Custom Metflex patches: thin, lightweight and metallic with full-color print options. A modern reflective finish for fashion and premium apparel. Request a quote.',
+      'Custom Metflex patches: thin, lightweight and metallic with full-color print options. A modern reflective finish for fashion apparel. Request a quote.',
     intro:
       'Metflex is our newest material: a thin, lightweight patch with a metallic sheen and optional full-color printing. It catches light like foil but flexes like fabric — a distinctive finish for fashion-forward brands.',
     features: [
@@ -354,7 +354,7 @@ export const otherProducts = [
     image: coinImg,
     description:
       'Die-struck metal coins with antique or polished finishes. The standard for recognition, military, and civic pride.',
-    seoTitle: 'Custom Challenge Coins — Military & Corporate | X Atlantic Patches',
+    seoTitle: 'Custom Challenge Coins | X Atlantic Patches',
     metaDesc:
       'Custom challenge coins die-struck in brass with antique or polished finishes. Military, first responder and corporate recognition coins. Price yours instantly.',
     intro:
@@ -450,7 +450,7 @@ export const otherProducts = [
     image: beaniesImg,
     description:
       'Premium knit beanies finished with your patch or woven label. Cold-weather merch that gets worn for years.',
-    seoTitle: 'Custom Beanies — Knit Hats with Your Patch | X Atlantic Patches',
+    seoTitle: 'Custom Beanies with Your Patch | X Atlantic Patches',
     metaDesc:
       'Custom knit beanies finished with your leather, woven or embroidered patch. Premium cold-weather merch in your brand colors. Request a free quote.',
     intro:
@@ -482,7 +482,7 @@ export const otherProducts = [
     image: scarvesImg,
     description:
       'Woven and printed scarves for supporters, teams, and luxury gifting. Soft hand-feel, vivid color retention.',
-    seoTitle: 'Custom Scarves — Supporter & Team Scarves | X Atlantic Patches',
+    seoTitle: 'Custom Team Scarves | X Atlantic Patches',
     metaDesc:
       'Custom woven supporter scarves and printed scarves for teams, clubs and events. Soft hand-feel, vivid knit-in color, tassel finishing. Request a free quote.',
     intro:
