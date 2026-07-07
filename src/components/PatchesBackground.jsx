@@ -37,25 +37,33 @@ function seededRandom(seed) {
 // a mechanical repeating tile grid.
 function buildLayout() {
   const rand = seededRandom(20260706)
-  const cols = 8
-  const rows = 5
+  const cols = 12
+  const rows = 8
   const cellW = 100 / cols
   const cellH = 100 / rows
   const cards = []
   let i = 0
   for (let row = 0; row < rows; row++) {
     for (let col = 0; col < cols; col++) {
-      const jitterX = (rand() - 0.5) * cellW * 0.7
-      const jitterY = (rand() - 0.5) * cellH * 0.7
+      const jitterX = (rand() - 0.5) * cellW * 0.9
+      const jitterY = (rand() - 0.5) * cellH * 0.9
       const centerX = col * cellW + cellW / 2 + jitterX
       const centerY = row * cellH + cellH / 2 + jitterY
-      const size = 12 + rand() * 8 // 12–20% of section width
+      // Width and height are sized off their own axis's cell size (not a
+      // single square size derived from width alone) so cards overlap
+      // enough on BOTH axes no matter the section's aspect ratio. A square
+      // card sized purely as a % of width left tall/narrow viewports (e.g.
+      // mobile, where the section is much taller than it is wide) with
+      // large vertical gaps between rows.
+      const sizeW = cellW * (1.6 + rand() * 0.8) // ~1.6–2.4x cell width
+      const sizeH = cellH * (1.6 + rand() * 0.8) // ~1.6–2.4x cell height
       const rotate = Math.round((rand() - 0.5) * 36) // -18..18deg
       cards.push({
         img: photos[i % photos.length],
         left: `${centerX}%`,
         top: `${centerY}%`,
-        size: `${size}%`,
+        width: `${sizeW}%`,
+        height: `${sizeH}%`,
         rotate,
         depth: rand(), // controls paint order only — see note below
       })
@@ -84,8 +92,8 @@ export default function PatchesBackground() {
           style={{
             left: c.left,
             top: c.top,
-            width: c.size,
-            aspectRatio: '1 / 1',
+            width: c.width,
+            height: c.height,
             transform: `translate(-50%, -50%) rotate(${c.rotate}deg)`,
           }}
         >
