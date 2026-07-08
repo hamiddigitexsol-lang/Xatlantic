@@ -101,7 +101,10 @@
       "Bash(cp \"WhatsApp Image 2026-07-07 at 3.17.15 AM.jpeg\" \"C:\\\\Users\\\\Lenovo\\\\Desktop\\\\Xatlantic\\\\src\\\\assets\\\\hero-patches\\\\money-roll.jpg\")",
       "Bash(rm -f icon-test.png icon-test2.png lockup-test.png lockup-test2.png)",
       "Bash(npm uninstall *)",
-      "Bash(grep -rl \"X Atlantic Patches\" \"C:\\\\Users\\\\Lenovo\\\\Desktop\\\\Xatlantic\\\\src\" \"C:\\\\Users\\\\Lenovo\\\\Desktop\\\\Xatlantic\\\\index.html\")"
+      "Bash(grep -rl \"X Atlantic Patches\" \"C:\\\\Users\\\\Lenovo\\\\Desktop\\\\Xatlantic\\\\src\" \"C:\\\\Users\\\\Lenovo\\\\Desktop\\\\Xatlantic\\\\index.html\")",
+      "Bash(node -e \"let d='';process.stdin.on\\('data',c=>d+=c\\);process.stdin.on\\('end',\\(\\)=>{const j=JSON.parse\\(d\\);console.log\\('state:',j.state,'error:',j.error_message\\)}\\)\")",
+      "WebFetch(domain:www.netlify.com)",
+      "Bash(curl -sI https://www.xatlanticpatches.com/)"
     ]
   }
 }
