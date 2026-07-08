@@ -1,4 +1,5 @@
 import Seo from '../components/Seo'
+import { contactInfo } from '../data/content'
 import Hero from '../components/Hero'
 import LogoMarquee from '../components/LogoMarquee'
 import TrustBar from '../components/TrustBar'
@@ -20,6 +21,7 @@ export default function Home() {
           name: 'Xatlantic Patches',
           url: 'https://xatlanticpatches.com',
           logo: 'https://xatlanticpatches.com/logo.png',
+          telephone: contactInfo.phone,
           description:
             'Custom patches and promotional products manufacturer — embroidered, woven, PVC, chenille, leather, and dye sublimation patches plus pins, coins, and keychains.',
           address: {

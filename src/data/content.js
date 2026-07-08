@@ -133,7 +133,7 @@ export const navLinks = [
 ]
 
 export const contactInfo = {
-  phone: '+1 (800) 555-0142',
+  phone: '+1 (214) 778-5220',
   email: 'hello@xatlanticpatches.com',
   address: '10601 Clarence Dr, Frisco, TX 75033',
 }
