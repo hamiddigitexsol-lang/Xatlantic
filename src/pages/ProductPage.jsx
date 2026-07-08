@@ -1,7 +1,7 @@
 import { Link, Navigate, useParams } from 'react-router-dom'
 import { ArrowRight, BadgeCheck, CheckCircle2 } from 'lucide-react'
 import { productBySlug, allProducts, calculatorProducts } from '../data/products'
-import Seo from '../components/Seo'
+import Seo, { SITE_URL } from '../components/Seo'
 import PageHero from '../components/ui/PageHero'
 import Reveal from '../components/ui/Reveal'
 import Calculator from '../components/Calculator'
@@ -29,6 +29,7 @@ export default function ProductPage() {
           '@type': 'Product',
           name: product.plural,
           description: product.metaDesc,
+          image: product.image ? `${SITE_URL}${product.image}` : undefined,
           brand: { '@type': 'Brand', name: 'Xatlantic Patches' },
           offers: {
             '@type': 'AggregateOffer',

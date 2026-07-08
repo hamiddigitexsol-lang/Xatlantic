@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.xatlanticpatches.com/sitemap.xml
+Sitemap: https://xatlanticpatches.com/sitemap.xml

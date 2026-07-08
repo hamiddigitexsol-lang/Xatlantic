@@ -18,9 +18,18 @@ export default function Home() {
           '@context': 'https://schema.org',
           '@type': 'Organization',
           name: 'Xatlantic Patches',
-          url: 'https://www.xatlanticpatches.com',
+          url: 'https://xatlanticpatches.com',
+          logo: 'https://xatlanticpatches.com/logo.png',
           description:
             'Custom patches and promotional products manufacturer — embroidered, woven, PVC, chenille, leather, and dye sublimation patches plus pins, coins, and keychains.',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: '10601 Clarence Dr',
+            addressLocality: 'Frisco',
+            addressRegion: 'TX',
+            postalCode: '75033',
+            addressCountry: 'US',
+          },
         }}
       />
       <Hero />

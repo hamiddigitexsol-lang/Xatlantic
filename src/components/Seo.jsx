@@ -4,7 +4,10 @@ import { useEffect } from 'react'
 // canonical URL, and optional JSON-LD structured data on route change.
 // (No extra dependency needed — works with any React Router page.)
 const SITE_NAME = 'Xatlantic Patches'
-const SITE_URL = 'https://www.xatlanticpatches.com'
+// Must match the domain Netlify actually serves (apex, not www — www 301s
+// to apex). Canonicals/sitemap pointing at a redirecting URL confuses
+// crawlers instead of consolidating ranking signal onto the served URL.
+const SITE_URL = 'https://xatlanticpatches.com'
 
 function upsertMeta(name, content) {
   let el = document.querySelector(`meta[name="${name}"]`)
