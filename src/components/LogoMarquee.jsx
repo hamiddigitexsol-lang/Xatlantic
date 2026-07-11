@@ -1,28 +1,21 @@
-import { Star } from 'lucide-react'
-import { clientLogos } from '../data/content'
+import { styles } from '../data/styles'
 import Reveal from './ui/Reveal'
 
-// Infinite, hover-pausable logo marquee. Logos are placeholder wordmarks —
-// replace the strings in content.js (or render <img> tags) with real client logos.
+// Infinite, hover-pausable marquee of real patch style categories — this
+// used to show fabricated "client logos" and a fake review-count badge,
+// which is a trust/legal risk once the site is live with real visitors.
+// Showing our actual product range is a truthful substitute until real
+// client logos and reviews are available.
 export default function LogoMarquee() {
-  const loop = [...clientLogos, ...clientLogos]
+  const styleNames = styles.map((s) => s.name)
+  const loop = [...styleNames, ...styleNames]
 
   return (
     <section className="border-y border-line bg-paper py-10">
       <div className="container-x">
-        <Reveal className="mb-7 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-8">
-          {/* Trustpilot-style rating badge (placeholder) */}
-          <div className="flex items-center gap-2.5 rounded-full border border-line bg-white px-4 py-2 shadow-sm">
-            <div className="flex text-gold">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} size={16} fill="currentColor" />
-              ))}
-            </div>
-            <span className="text-sm font-semibold text-navy-900">4.9 / 5</span>
-            <span className="text-xs text-muted">· 1,200+ reviews</span>
-          </div>
+        <Reveal className="mb-7 flex flex-col items-center justify-center gap-4">
           <p className="text-sm font-medium uppercase tracking-[0.18em] text-muted">
-            Trusted by teams &amp; brands worldwide
+            Every style, crafted to order
           </p>
         </Reveal>
       </div>

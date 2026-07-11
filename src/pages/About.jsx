@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import { Award, HeartHandshake, Ruler, Sparkles } from 'lucide-react'
-import { stats } from '../data/content'
 import Seo from '../components/Seo'
 import PageHero from '../components/ui/PageHero'
 import Reveal from '../components/ui/Reveal'
@@ -80,20 +79,6 @@ export default function About() {
                   </div>
                   <h3 className="mt-4 font-bold text-navy-900">{title}</h3>
                   <p className="mt-1.5 text-sm leading-relaxed text-muted">{body}</p>
-                </div>
-              ))}
-            </div>
-          </Reveal>
-        </div>
-
-        {/* Stats — placeholder figures, edit in src/data/content.js */}
-        <div className="container-x mt-14">
-          <Reveal>
-            <div className="grid grid-cols-2 divide-x divide-white/10 overflow-hidden rounded-2xl bg-navy-grad py-9 sm:grid-cols-4">
-              {stats.map((s) => (
-                <div key={s.label} className="px-4 text-center">
-                  <p className="text-3xl font-extrabold text-white sm:text-4xl">{s.value}</p>
-                  <p className="mt-1 text-xs font-medium uppercase tracking-wider text-white/60">{s.label}</p>
                 </div>
               ))}
             </div>

@@ -24,18 +24,6 @@ export const trustFeatures = [
   },
 ]
 
-// Placeholder client logos rendered as clean wordmarks (no real assets required).
-// Swap for real SVG/PNG logos in src/assets when available.
-export const clientLogos = [
-  'NORTHBOUND',
-  'Field & Forge',
-  'METRO FIRE',
-  'Vanguard',
-  'ALLCORNHOLE',
-  'Summit Co.',
-  'Harbor & Co',
-  'Veterans United',
-]
 
 export const processSteps = [
   {
@@ -113,14 +101,6 @@ export const testimonials = [
     name: 'Lena Whitfield',
     role: 'Creative Director, Harbor & Co',
   },
-]
-
-// Placeholder stats — replace with the client's verified numbers.
-export const stats = [
-  { value: '1,000+', label: 'Brands Served' },
-  { value: '4.9/5', label: 'Average Rating' },
-  { value: '2M+', label: 'Emblems Crafted' },
-  { value: '98%', label: 'Reorder Rate' },
 ]
 
 export const navLinks = [

@@ -1,5 +1,5 @@
 import { BadgeDollarSign, Layers, ShieldCheck, Timer } from 'lucide-react'
-import { trustFeatures, stats } from '../data/content'
+import { trustFeatures } from '../data/content'
 import SectionHeading from './ui/SectionHeading'
 import Reveal from './ui/Reveal'
 
@@ -31,20 +31,6 @@ export default function TrustBar() {
             )
           })}
         </div>
-
-        {/* Stat strip — placeholder numbers, edit in src/data/content.js */}
-        <Reveal y={28}>
-          <div className="mt-12 grid grid-cols-2 divide-x divide-line overflow-hidden rounded-2xl bg-navy-grad py-9 sm:grid-cols-4">
-            {stats.map((s) => (
-              <div key={s.label} className="px-4 text-center">
-                <p className="text-3xl font-extrabold text-white sm:text-4xl">{s.value}</p>
-                <p className="mt-1 text-xs font-medium uppercase tracking-wider text-white/60">
-                  {s.label}
-                </p>
-              </div>
-            ))}
-          </div>
-        </Reveal>
       </div>
     </section>
   )

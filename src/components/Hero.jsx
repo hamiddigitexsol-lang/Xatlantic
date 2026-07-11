@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ArrowRight, Check, Star } from 'lucide-react'
+import { ArrowRight, Check } from 'lucide-react'
 import Calculator from './Calculator'
 import PatchesBackground from './PatchesBackground'
 
@@ -43,12 +43,7 @@ export default function Hero({ selectedProductId }) {
         <div className="max-w-xl">
           <motion.div variants={fadeUp} initial="hidden" animate="show" custom={0}>
             <span className="inline-flex items-center gap-2 rounded-full border border-line bg-white px-3.5 py-1.5 text-xs font-semibold text-ink shadow-sm">
-              <span className="flex text-gold">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={13} fill="currentColor" />
-                ))}
-              </span>
-              Rated 4.9/5 by 1,000+ brands
+              Premium custom patches &amp; emblems
             </span>
           </motion.div>
 
