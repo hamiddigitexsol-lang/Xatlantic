@@ -51,8 +51,15 @@ export default function ProductPage() {
         <div className="container-x grid items-start gap-10 lg:grid-cols-[1fr_1.05fr]">
           <Reveal>
             <div>
-              <h2 className="text-2xl font-extrabold text-navy-900">
-                Why choose {product.name.toLowerCase()}s?
+              {product.image && (
+                <img
+                  src={product.image}
+                  alt={`${product.plural} sample — Xatlantic Patches`}
+                  className="aspect-[4/3] w-full rounded-2xl border border-line object-cover shadow-card"
+                />
+              )}
+              <h2 className="mt-8 text-2xl font-extrabold text-navy-900">
+                Why choose {product.plural.toLowerCase()}?
               </h2>
               <ul className="mt-6 space-y-4">
                 {product.features.map((f) => (
@@ -112,13 +119,22 @@ export default function ProductPage() {
               <Link
                 key={p.id}
                 to={`/products/${p.slug}`}
-                className="group rounded-2xl border border-line bg-white p-5 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-brand/30 hover:shadow-card-hover"
+                className="group overflow-hidden rounded-2xl border border-line bg-white shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-brand/30 hover:shadow-card-hover"
               >
-                <h3 className="font-bold text-navy-900 transition-colors group-hover:text-brand">{p.plural}</h3>
-                <p className="mt-1.5 line-clamp-2 text-sm text-muted">{p.description}</p>
-                <span className="mt-3 inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-brand">
-                  View <ArrowRight size={13} />
-                </span>
+                {p.image && (
+                  <img
+                    src={p.image}
+                    alt={`${p.plural} sample`}
+                    className="aspect-video w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                )}
+                <div className="p-5">
+                  <h3 className="font-bold text-navy-900 transition-colors group-hover:text-brand">{p.plural}</h3>
+                  <p className="mt-1.5 line-clamp-2 text-sm text-muted">{p.description}</p>
+                  <span className="mt-3 inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-brand">
+                    View <ArrowRight size={13} />
+                  </span>
+                </div>
               </Link>
             ))}
           </div>

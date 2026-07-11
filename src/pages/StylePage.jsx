@@ -62,15 +62,24 @@ export default function StylePage() {
                     <Link
                       key={p.id}
                       to={`/products/${p.slug}`}
-                      className="group rounded-2xl border border-line bg-paper p-5 transition-all duration-300 hover:-translate-y-1 hover:border-brand/30 hover:shadow-card"
+                      className="group overflow-hidden rounded-2xl border border-line bg-paper transition-all duration-300 hover:-translate-y-1 hover:border-brand/30 hover:shadow-card"
                     >
-                      <h4 className="font-bold text-navy-900 transition-colors group-hover:text-brand">
-                        {p.plural}
-                      </h4>
-                      <p className="mt-1 line-clamp-2 text-sm text-muted">{p.description}</p>
-                      <span className="mt-2.5 inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-brand">
-                        See pricing <ArrowRight size={13} />
-                      </span>
+                      {p.image && (
+                        <img
+                          src={p.image}
+                          alt={`${p.plural} sample`}
+                          className="aspect-video w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                      )}
+                      <div className="p-5">
+                        <h4 className="font-bold text-navy-900 transition-colors group-hover:text-brand">
+                          {p.plural}
+                        </h4>
+                        <p className="mt-1 line-clamp-2 text-sm text-muted">{p.description}</p>
+                        <span className="mt-2.5 inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-brand">
+                          See pricing <ArrowRight size={13} />
+                        </span>
+                      </div>
                     </Link>
                   ))}
                 </div>
