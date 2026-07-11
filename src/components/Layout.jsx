@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { Outlet, useLocation } from 'react-router-dom'
 import Header from './Header'
 import Footer from './Footer'
+import QuotePopup from './QuotePopup'
 
 // Wraps every route with the header/footer and restores scroll on navigation.
 export default function Layout() {
@@ -25,6 +26,7 @@ export default function Layout() {
         <Outlet />
       </main>
       <Footer />
+      <QuotePopup />
     </div>
   )
 }
