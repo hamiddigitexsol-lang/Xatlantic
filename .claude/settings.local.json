@@ -104,7 +104,10 @@
       "Bash(grep -rl \"X Atlantic Patches\" \"C:\\\\Users\\\\Lenovo\\\\Desktop\\\\Xatlantic\\\\src\" \"C:\\\\Users\\\\Lenovo\\\\Desktop\\\\Xatlantic\\\\index.html\")",
       "Bash(node -e \"let d='';process.stdin.on\\('data',c=>d+=c\\);process.stdin.on\\('end',\\(\\)=>{const j=JSON.parse\\(d\\);console.log\\('state:',j.state,'error:',j.error_message\\)}\\)\")",
       "WebFetch(domain:www.netlify.com)",
-      "Bash(curl -sI https://www.xatlanticpatches.com/)"
+      "Bash(curl -sI https://www.xatlanticpatches.com/)",
+      "Bash(curl -sI https://xatlanticpatches.com/favicon.png)",
+      "Bash(curl -sI https://xatlanticpatches.com/favicon.ico)",
+      "Bash(curl -s \"https://www.google.com/s2/favicons?domain=xatlanticpatches.com&sz=64\" -o /tmp/gfav.png -w \"http_code:%{http_code} size:%{size_download}\\\\n\")"
     ]
   }
 }
