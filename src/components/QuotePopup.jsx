@@ -6,8 +6,9 @@ import { allProducts } from '../data/products'
 import { backings } from '../data/pricing'
 import { submitNetlifyForm } from '../lib/netlifyForms'
 
-const SHOWN_KEY = 'xap_quote_popup_shown'
+const COUNT_KEY = 'xap_quote_popup_count'
 const DELAY_MS = 7000
+const MAX_SHOWS_PER_SESSION = 3
 
 const emptyForm = {
   name: '',
@@ -22,8 +23,9 @@ const emptyForm = {
   quantity: '',
 }
 
-// Site-wide lead-capture popup — auto-opens once per browser session, 7s
-// after a visitor lands, so it doesn't fire again on every internal nav.
+// Site-wide lead-capture popup — auto-opens 7s after landing on a page, up
+// to 3 times per browser session (once per qualifying page landing), so it
+// doesn't nag indefinitely. Stops early if the visitor already submitted.
 // Skipped on /contact since that page already has the full inline form.
 export default function QuotePopup() {
   const { pathname } = useLocation()
@@ -36,10 +38,11 @@ export default function QuotePopup() {
 
   useEffect(() => {
     if (pathname === '/contact') return
-    if (sessionStorage.getItem(SHOWN_KEY)) return
+    const shownCount = Number(sessionStorage.getItem(COUNT_KEY) || 0)
+    if (shownCount >= MAX_SHOWS_PER_SESSION) return
     const timer = setTimeout(() => {
       setOpen(true)
-      sessionStorage.setItem(SHOWN_KEY, '1')
+      sessionStorage.setItem(COUNT_KEY, String(shownCount + 1))
     }, DELAY_MS)
     return () => clearTimeout(timer)
   }, [pathname])
@@ -69,6 +72,7 @@ export default function QuotePopup() {
         ...(artwork ? { artwork } : {}),
       })
       setSubmitted(true)
+      sessionStorage.setItem(COUNT_KEY, String(MAX_SHOWS_PER_SESSION))
     } catch (err) {
       console.error('Quote popup submission failed', err)
       setError(true)
