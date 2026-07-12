@@ -7,17 +7,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Xatlantic Patches — premium custom embroidered, chenille, PVC, leather, and woven patches plus pins, coins, and promotional products. Custom emblems, crafted to a premium standard."
+      content="Xatlantic Patches — premium custom embroidered, chenille, PVC, leather & woven patches, plus pins, coins & promotional products. Crafted to a premium standard."
     />
     <meta name="theme-color" content="#ffffff" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Xatlantic Patches" />
+    <meta property="og:url" content="https://xatlanticpatches.com/" />
     <meta property="og:title" content="Xatlantic Patches | Custom Patches & Emblems" />
     <meta
       property="og:description"
       content="Premium custom patches and promotional products. Low minimums, premium materials, fast turnaround."
     />
+    <meta property="og:image" content="https://xatlanticpatches.com/logo.png" />
+    <meta property="og:image:width" content="192" />
+    <meta property="og:image:height" content="192" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Xatlantic Patches | Custom Patches & Emblems" />
+    <meta
+      name="twitter:description"
+      content="Premium custom patches and promotional products. Low minimums, premium materials, fast turnaround."
+    />
+    <meta name="twitter:image" content="https://xatlanticpatches.com/logo.png" />
+
+    <!--
+      Static, site-wide Organization schema — present in every page's raw
+      HTML (unlike src/components/Seo.jsx's per-route JSON-LD, which is
+      injected by React after JS runs). This is a React SPA, so any crawler
+      or tool that doesn't execute JavaScript otherwise sees no schema.org
+      data and no links at all in the raw HTML.
+    -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Xatlantic Patches",
+        "url": "https://xatlanticpatches.com",
+        "logo": "https://xatlanticpatches.com/logo.png",
+        "telephone": "+1 (214) 778-5220",
+        "email": "hello@xatlanticpatches.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "10601 Clarence Dr",
+          "addressLocality": "Frisco",
+          "addressRegion": "TX",
+          "postalCode": "75033",
+          "addressCountry": "US"
+        }
+      }
+    </script>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -31,6 +72,32 @@
   </head>
   <body>
     <div id="root"></div>
+
+    <!--
+      Fallback content for crawlers/tools that don't execute JavaScript —
+      this is a client-rendered React app, so without this, a non-JS
+      crawler sees zero links and zero content in the raw HTML.
+    -->
+    <noscript>
+      <h1>Xatlantic Patches — Custom Patches &amp; Emblems</h1>
+      <p>
+        Premium custom embroidered, chenille, PVC, leather &amp; woven patches, plus pins, coins,
+        and promotional products. Low minimums, free digital proof, fast turnaround.
+      </p>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/products">All Products</a>
+        <a href="/products/embroidered-patches">Embroidered Patches</a>
+        <a href="/products/pvc-patches">PVC Patches</a>
+        <a href="/products/leather-patches">Leather Patches</a>
+        <a href="/patches">Patch Styles</a>
+        <a href="/pricing">Pricing</a>
+        <a href="/gallery">Gallery</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </noscript>
+
     <script type="module" src="/src/main.jsx"></script>
 
     <!--
